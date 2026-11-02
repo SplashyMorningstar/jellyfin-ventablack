@@ -183,6 +183,21 @@ body,
   border-radius: 8px !important;
 }
 
+/* MUI account/settings rows: separate each tile instead of drawing one block. */
+.MuiListItemButton-root {
+  box-sizing: border-box !important;
+  min-height: 58px !important;
+  height: auto !important;
+  margin-block: 4px !important;
+  padding-block: 12px !important;
+  border-radius: 14px !important;
+  background-color: #0b0b0b !important;
+}
+
+.MuiListItemButton-root + .MuiListItemButton-root {
+  margin-top: 5px !important;
+}
+
 .header,
 .mainDrawer,
 .dialog,
@@ -491,37 +506,39 @@ input.emby-checkbox:checked + label::before,
 .header .headerButton:not(.headerLogoButton),
 .header button:not(.headerLogoButton),
 .header [role="button"]:not(.headerLogoButton),
+.header .MuiIconButton-root,
 .skinHeader .headerButton:not(.headerLogoButton),
 .skinHeader button:not(.headerLogoButton),
-.skinHeader [role="button"]:not(.headerLogoButton) {
+.skinHeader [role="button"]:not(.headerLogoButton),
+.skinHeader .MuiIconButton-root {
   box-sizing: border-box !important;
-  width: 34px !important;
-  min-width: 34px !important;
-  max-width: 34px !important;
-  height: 34px !important;
-  min-height: 34px !important;
-  max-height: 34px !important;
+  width: 30px !important;
+  min-width: 30px !important;
+  max-width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
   padding: 0 !important;
   margin: 0 4px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  flex: 0 0 34px !important;
+  flex: 0 0 30px !important;
   border-radius: 50% !important;
 }
 
 /* Keep card overlay actions compact and evenly spaced over the artwork. */
-.cardOverlayButton,
+.cardOverlayButton:not(.cardOverlayButton-centered),
 .cardOverlayButtonContainer .emby-button,
 .cardOverlayButtonContainer button {
   box-sizing: border-box !important;
-  width: 32px !important;
-  min-width: 32px !important;
-  max-width: 32px !important;
-  height: 32px !important;
-  min-height: 32px !important;
-  max-height: 32px !important;
-  padding: 0 !important;
+  width: 30px !important;
+  min-width: 30px !important;
+  max-width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  padding: 0.2em !important;
   margin: 0 2px !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -529,9 +546,20 @@ input.emby-checkbox:checked + label::before,
   border-radius: 50% !important;
 }
 
+.cardOverlayButtonIcon {
+  width: 1.25em !important;
+  height: 1.25em !important;
+  font-size: 1.35em !important;
+}
+
 .cardOverlayButtonContainer {
   bottom: 8px !important;
   gap: 4px !important;
+}
+
+.cardOverlayButton-br {
+  bottom: 8px !important;
+  right: 6px !important;
 }
 
 /* Menu items need room for their labels and icons; don't clip their lower edge. */
