@@ -7,7 +7,7 @@ Tema negro y monocromático para Jellyfin Web, sin blur ni animaciones para mant
 En Jellyfin, ve a **Panel de control → General → CSS personalizado** y pega esta línea como primera línea:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/SplashyMorningstar/jellyfin-ventablack@1.0.2/ventablack.css");
+@import url("https://cdn.jsdelivr.net/gh/SplashyMorningstar/jellyfin-ventablack@1.0.3/ventablack.css");
 ```
 
 Guarda y recarga Jellyfin. Si no aparece, prueba una recarga forzada (`Ctrl+F5`). El enlace apunta a una versión fija para evitar que el CDN mezcle el CSS nuevo con una copia antigua.
