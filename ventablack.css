@@ -93,11 +93,23 @@ body,
 .sectionTitleContainer .sectionTitle,
 .sectionTitleContainer a,
 .sectionTitleContainer .emby-button {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #ededed !important;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   outline: 0 !important;
-  padding-inline: 0 !important;
+  filter: none !important;
+}
+
+.sectionTitleContainer * {
+  background-color: transparent !important;
+}
+
+.sectionTitleContainer {
+  background: #000 !important;
+  color: #ededed !important;
 }
 
 .paperList,
@@ -106,12 +118,41 @@ body,
 .listViewUserDataButtons,
 .verticalSection > .paperList {
   border-radius: 12px !important;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .paperList > .listItem,
-.mainDrawer .listItem {
-  margin-block: 4px !important;
+.mainDrawer .listItem,
+#userMenuPage .listItem,
+.userMenuPage .listItem,
+.paperList > .emby-button,
+.mainDrawer .emby-button {
+  box-sizing: border-box !important;
+  width: calc(100% - 16px) !important;
+  margin: 8px !important;
+  padding: 14px 16px !important;
+  background: #0b0b0b !important;
+  border: 1px solid #252525 !important;
+  border-radius: 10px !important;
+}
+
+.paperList,
+.mainDrawer .paperList,
+#userMenuPage .paperList,
+.userMenuPage .paperList {
+  background: #000 !important;
+}
+
+#userMenuPage a,
+.userMenuPage a,
+.mainDrawer .paperList > a {
+  display: flex !important;
+  box-sizing: border-box !important;
+  width: calc(100% - 16px) !important;
+  margin: 8px !important;
+  padding: 14px 16px !important;
+  background: #0b0b0b !important;
+  border: 1px solid #252525 !important;
   border-radius: 10px !important;
 }
 
@@ -266,6 +307,34 @@ input[type="radio"] {
   filter: grayscale(1) !important;
 }
 
+/* Catch native Jellyfin/dashboard controls that don't use .emby-button. */
+button,
+input[type="button"],
+input[type="submit"],
+[role="button"] {
+  background-color: #191919 !important;
+  background-image: none !important;
+  color: #ededed !important;
+  border-color: #383838 !important;
+  filter: grayscale(1) !important;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #bdbdbd !important;
+  filter: grayscale(1) !important;
+}
+
+input[type="checkbox"]:checked + span::before,
+input[type="checkbox"]:checked + label::before,
+input.emby-checkbox:checked + span::before,
+input.emby-checkbox:checked + label::before,
+[role="checkbox"][aria-checked="true"] {
+  background-color: #bdbdbd !important;
+  border-color: #bdbdbd !important;
+  filter: grayscale(1) !important;
+}
+
 .emby-checkbox:checked + span::before,
 .emby-checkbox:checked + span::after,
 .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
@@ -349,4 +418,19 @@ input[type="radio"] {
 .nowPlayingBar {
   background-color: rgba(0, 0, 0, 0.94) !important;
   color: #eee !important;
+}
+
+/* Desaturate Jellyfin's brand mark only, not user avatars or media artwork. */
+.skinHeader .headerLogo,
+.headerLogo,
+.pageTitleWithLogo img {
+  filter: grayscale(1) brightness(1.35) !important;
+}
+
+.skinHeader,
+.header,
+.headerTop,
+.headerTabs {
+  background: #000 !important;
+  background-color: #000 !important;
 }
