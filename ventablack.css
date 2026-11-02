@@ -446,6 +446,10 @@ input.emby-checkbox:checked + label::before,
 }
 
 /* Desaturate the brand mark at the left of the header, never the user avatar. */
+.headerLeft img,
+.headerLeft svg,
+.headerLogoButton img,
+.headerLogoButton svg,
 .header [class*="Logo"],
 .header [class*="logo"],
 .header svg,
