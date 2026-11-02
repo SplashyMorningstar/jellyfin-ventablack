@@ -192,13 +192,14 @@ body,
   padding-block: 12px !important;
   border-radius: 16px !important;
   background-color: #0b0b0b !important;
+  overflow: visible !important;
 }
 
 .MuiList-root {
   display: flex !important;
   flex-direction: column !important;
   gap: 6px !important;
-  padding-block: 4px !important;
+  padding: 4px 0 16px !important;
 }
 
 .header,
@@ -532,6 +533,33 @@ input.emby-checkbox:checked + label::before,
   border-radius: 50% !important;
 }
 
+.header .MuiIconButton-root,
+.headerRight .MuiIconButton-root,
+.MuiToolbar-root .MuiIconButton-root {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.header .MuiIconButton-root .MuiSvgIcon-root,
+.headerRight .MuiIconButton-root .MuiSvgIcon-root,
+.MuiToolbar-root .MuiIconButton-root .MuiSvgIcon-root {
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 20px !important;
+}
+
+.header .MuiIconButton-root:has(img),
+.headerRight .MuiIconButton-root:has(img) {
+  width: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+  flex-basis: 40px !important;
+}
+
 /* Keep card overlay actions compact and evenly spaced over the artwork. */
 .cardOverlayButton:not(.cardOverlayButton-centered),
 .cardOverlayButtonContainer .emby-button,
@@ -557,6 +585,13 @@ input.emby-checkbox:checked + label::before,
   font-size: 1.2em !important;
 }
 
+.cardOverlayButton .MuiSvgIcon-root,
+.cardOverlayButton .material-icons {
+  width: 16px !important;
+  height: 16px !important;
+  font-size: 16px !important;
+}
+
 .cardOverlayButtonContainer {
   bottom: 8px !important;
   gap: 4px !important;
@@ -566,6 +601,34 @@ input.emby-checkbox:checked + label::before,
   bottom: 12px !important;
   right: 6px !important;
   margin-bottom: 4px !important;
+}
+
+/* Small, unobtrusive carousel arrows instead of oversized circles. */
+.emby-scrollbuttons {
+  min-width: 72px !important;
+  min-height: 24px !important;
+  padding-top: 0.25em !important;
+}
+
+.emby-scrollbuttons-button {
+  box-sizing: border-box !important;
+  width: 30px !important;
+  min-width: 30px !important;
+  max-width: 30px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  max-height: 30px !important;
+  padding: 3px !important;
+  margin: 0 2px !important;
+  border-radius: 50% !important;
+}
+
+.emby-scrollbuttons-button > .material-icons {
+  width: 18px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  min-height: 18px !important;
+  font-size: 18px !important;
 }
 
 /* Menu items need room for their labels and icons; don't clip their lower edge. */
