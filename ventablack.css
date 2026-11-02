@@ -1,0 +1,208 @@
+/*
+ * VantaBlack — monochrome AMOLED theme for Jellyfin Web
+ * Inspired by Omarchy's Vantablack palette.
+ * Paste into Dashboard > General > Custom CSS, or load as a stylesheet.
+ */
+
+:root {
+  color-scheme: dark;
+  --vb-black: #000;
+  --vb-bg: #050505;
+  --vb-surface: #0b0b0b;
+  --vb-raised: #111;
+  --vb-border: #242424;
+  --vb-text: #ededed;
+  --vb-muted: #a0a0a0;
+  --vb-dim: #707070;
+  --vb-highlight: #fff;
+  --vb-focus: #c8c8c8;
+}
+
+html,
+body,
+.skinBody,
+.backgroundContainer,
+.mainDrawer,
+.page,
+.paperList,
+.cardBox {
+  color: var(--vb-text);
+}
+
+html,
+body,
+.skinBody,
+.backgroundContainer,
+.mainDrawer,
+.mainAnimatedPages,
+.libraryPage,
+.homePage,
+.emby-tab-body,
+.dialog,
+.formDialog,
+.toast {
+  background-color: var(--vb-black) !important;
+}
+
+/* Make the common Jellyfin surfaces truly black, not blue-tinted charcoal. */
+.header,
+.headerTop,
+.paperList,
+.cardBox,
+.detailPageContent,
+.detailPagePrimaryContainer,
+.listItem,
+.section0,
+.sectionTitleContainer,
+.emby-select,
+.emby-input,
+.emby-textarea,
+.emby-checkbox + span,
+.emby-button:not(.raised),
+.emby-selectlist {
+  background-color: var(--vb-surface) !important;
+}
+
+.mainDrawer,
+.dialog,
+.formDialog,
+.toast,
+.emby-select option,
+.emby-selectlist {
+  background-color: var(--vb-raised) !important;
+}
+
+.header,
+.mainDrawer,
+.dialog,
+.formDialog,
+.paperList,
+.listItem,
+.emby-input,
+.emby-textarea,
+.emby-select,
+.emby-selectlist {
+  border-color: var(--vb-border) !important;
+}
+
+/* Restrained grayscale typography; keep posters and artwork in full color. */
+body,
+button,
+input,
+select,
+textarea,
+.emby-button,
+.emby-tab-button,
+.sectionTitle,
+.cardText,
+.listItemBody,
+.detailPageContent {
+  color: var(--vb-text);
+}
+
+.secondary,
+.fieldDescription,
+.mediaInfoText,
+.listItem .secondary,
+.cardText-secondary,
+.emby-input::placeholder,
+.emby-textarea::placeholder {
+  color: var(--vb-muted) !important;
+}
+
+a,
+.button-link,
+.emby-tab-button {
+  color: #d6d6d6;
+}
+
+a:hover,
+.button-link:hover,
+.emby-tab-button:hover {
+  color: var(--vb-highlight);
+}
+
+/* Neutral buttons, selected tabs, progress and switches. */
+.emby-button.raised,
+.emby-button.show-focus:focus,
+.emby-button:focus-visible {
+  background: #1b1b1b !important;
+  color: #fff !important;
+  border: 1px solid #383838;
+}
+
+.emby-tab-button-active,
+.emby-tab-button[aria-selected="true"] {
+  color: #fff !important;
+  border-bottom-color: #d0d0d0 !important;
+}
+
+.emby-checkbox:checked + span,
+.emby-radio:checked + span,
+.emby-slider thumb,
+.mdl-slider::-webkit-slider-thumb,
+.mdl-switch.is-checked .mdl-switch__thumb {
+  background-color: #c8c8c8 !important;
+}
+
+.itemProgressBar,
+.playedIndicator,
+.mdl-progress > .progressbar {
+  background-color: #bdbdbd !important;
+}
+
+.itemProgressBarForeground,
+.mdl-progress > .bufferbar {
+  background-color: #555 !important;
+}
+
+/* Subtle edges and hover feedback. */
+.cardBox,
+.paperList,
+.listItem,
+.emby-input,
+.emby-select,
+.emby-textarea,
+.dialog,
+.formDialog {
+  border-radius: 4px;
+}
+
+.cardBox:hover,
+.listItem:hover,
+.emby-button:hover {
+  background-color: #171717 !important;
+}
+
+:focus-visible {
+  outline: 2px solid var(--vb-focus) !important;
+  outline-offset: 2px;
+}
+
+/* Remove colored/blurred page backdrops behind the UI without affecting media art. */
+.backgroundContainer.withBackdrop,
+.backdropContainer {
+  background: #000 !important;
+}
+
+.backdropContainer {
+  opacity: 0.14;
+}
+
+/* Keep the video itself untouched; darken only its surrounding player chrome. */
+.videoOsdBottom,
+.videoOsdBottom button,
+.videoOsdTop,
+.nowPlayingBar {
+  background-color: rgba(0, 0, 0, 0.94) !important;
+  color: #eee !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .emby-button,
+  .cardBox,
+  .listItem,
+  .emby-tab-button {
+    transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
+  }
+}
