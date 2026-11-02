@@ -88,6 +88,18 @@ body,
   color: #ededed !important;
 }
 
+/* Section labels should read as plain, consistently aligned headings, not pills. */
+.sectionTitleContainer,
+.sectionTitleContainer .sectionTitle,
+.sectionTitleContainer a,
+.sectionTitleContainer .emby-button {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  padding-inline: 0 !important;
+}
+
 .paperList,
 .emby-selectlist,
 .mainDrawer-scrollContainer,
@@ -95,6 +107,12 @@ body,
 .verticalSection > .paperList {
   border-radius: 12px !important;
   overflow: hidden;
+}
+
+.paperList > .listItem,
+.mainDrawer .listItem {
+  margin-block: 4px !important;
+  border-radius: 10px !important;
 }
 
 .listItem,
@@ -188,6 +206,9 @@ a:hover,
 /* Neutral buttons, selected tabs, progress and switches. */
 .emby-button,
 .emby-button.raised,
+.emby-button.button-submit,
+button.emby-button,
+.emby-button-primary,
 .emby-button-submit,
 .button-submit,
 .button-primary,
@@ -200,6 +221,7 @@ a:hover,
   color: #ededed !important;
   border: 1px solid #383838 !important;
   box-shadow: none !important;
+  filter: grayscale(1) !important;
 }
 
 .emby-button-submit,
@@ -226,6 +248,22 @@ a:hover,
 input[type="checkbox"],
 input[type="radio"] {
   accent-color: #bdbdbd !important;
+}
+
+/* Jellyfin versions differ in how custom checkboxes and primary buttons are built.
+   Grayscale these controls as a final safeguard against cyan theme defaults. */
+.emby-checkbox,
+.emby-checkbox + span,
+.emby-checkbox + span::before,
+.emby-checkbox + span::after,
+.emby-radio,
+.emby-radio + span,
+.emby-button-submit,
+.button-submit,
+.button-primary,
+.btn-primary,
+.mdl-button--raised {
+  filter: grayscale(1) !important;
 }
 
 .emby-checkbox:checked + span::before,
