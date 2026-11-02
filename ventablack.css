@@ -60,7 +60,6 @@ body,
 .detailPagePrimaryContainer,
 .listItem,
 .section0,
-.sectionTitleContainer,
 .emby-select,
 .emby-input,
 .emby-textarea,
@@ -77,6 +76,40 @@ body,
 .emby-select option,
 .emby-selectlist {
   background-color: var(--vb-raised) !important;
+}
+
+/* Uniform black section headers and softly rounded grouped panels. */
+.section0,
+.sectionTitleContainer,
+.sectionTitleContainer h1,
+.sectionTitleContainer h2,
+.sectionTitleContainer .sectionTitle {
+  background: #000 !important;
+  color: #ededed !important;
+}
+
+.paperList,
+.emby-selectlist,
+.mainDrawer-scrollContainer,
+.listViewUserDataButtons,
+.verticalSection > .paperList {
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+.listItem,
+.emby-select,
+.emby-input,
+.emby-textarea,
+.emby-button {
+  border-radius: 8px !important;
+}
+
+.cardBox,
+.cardImageContainer,
+.cardScalable,
+.cardImage {
+  border-radius: 8px !important;
 }
 
 .header,
@@ -153,12 +186,27 @@ a:hover,
 }
 
 /* Neutral buttons, selected tabs, progress and switches. */
+.emby-button,
 .emby-button.raised,
+.emby-button-submit,
+.button-submit,
+.button-primary,
+.btn-primary,
+.raised,
 .emby-button.show-focus:focus,
 .emby-button:focus-visible {
-  background: #1b1b1b !important;
-  color: #fff !important;
-  border: 1px solid #383838;
+  background: #191919 !important;
+  background-color: #191919 !important;
+  color: #ededed !important;
+  border: 1px solid #383838 !important;
+  box-shadow: none !important;
+}
+
+.emby-button-submit,
+.button-submit,
+.button-primary,
+.btn-primary {
+  border-radius: 10px !important;
 }
 
 .emby-tab-button-active,
@@ -168,11 +216,23 @@ a:hover,
 }
 
 .emby-checkbox:checked + span,
+.emby-checkbox:checked + span::before,
+.emby-checkbox:checked + span::after,
 .emby-radio:checked + span,
 .emby-slider thumb,
 .mdl-slider::-webkit-slider-thumb,
-.mdl-switch.is-checked .mdl-switch__thumb {
-  background-color: #c8c8c8 !important;
+.mdl-switch.is-checked .mdl-switch__thumb,
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline,
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #bdbdbd !important;
+}
+
+.emby-checkbox:checked + span::before,
+.emby-checkbox:checked + span::after,
+.mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+  background-color: #bdbdbd !important;
+  border-color: #bdbdbd !important;
 }
 
 .itemProgressBar,
