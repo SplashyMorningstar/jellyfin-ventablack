@@ -1,6 +1,6 @@
 # VantaBlack para Jellyfin
 
-Tema negro y monocromático para Jellyfin Web.
+Tema negro y monocromático para Jellyfin Web, sin blur ni animaciones para mantener la interfaz ligera.
 
 ## Instalar
 

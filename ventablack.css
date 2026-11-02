@@ -215,7 +215,33 @@ a:hover,
 }
 
 .backdropContainer {
-  opacity: 0.14;
+  opacity: 0;
+}
+
+/* Lightweight mode: no backdrop blur, animated transitions or decorative motion. */
+*,
+*::before,
+*::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.backgroundContainer,
+.backdropContainer,
+.detailPage,
+.detailPageContent,
+.mainDrawer,
+.dialog,
+.formDialog,
+.cardBox,
+.cardImageContainer,
+.cardScalable,
+.listItem {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 /* Keep the video itself untouched; darken only its surrounding player chrome. */
@@ -225,13 +251,4 @@ a:hover,
 .nowPlayingBar {
   background-color: rgba(0, 0, 0, 0.94) !important;
   color: #eee !important;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .emby-button,
-  .cardBox,
-  .listItem,
-  .emby-tab-button {
-    transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease;
-  }
 }
