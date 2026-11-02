@@ -6,9 +6,11 @@
 
 :root {
   color-scheme: dark;
-  --theme-primary-color: #bdbdbd;
-  --theme-primary-color-dark: #777;
-  --theme-accent-color: #bdbdbd;
+  --theme-primary-color: #bdbdbd !important;
+  --theme-primary-color-dark: #777 !important;
+  --theme-accent-color: #bdbdbd !important;
+  --jf-palette-primary-main: #bdbdbd !important;
+  --mdc-theme-primary: #bdbdbd !important;
   --theme-text-color: #ededed;
   --vb-black: #000;
   --vb-bg: #050505;
@@ -125,6 +127,10 @@ body,
 .mainDrawer .listItem,
 #userMenuPage .listItem,
 .userMenuPage .listItem,
+.paperList .emby-button,
+.mainDrawer .emby-button,
+#userMenuPage .emby-button,
+.userMenuPage .emby-button,
 .paperList > .emby-button,
 .mainDrawer .emby-button {
   box-sizing: border-box !important;
@@ -134,6 +140,16 @@ body,
   background: #0b0b0b !important;
   border: 1px solid #252525 !important;
   border-radius: 10px !important;
+}
+
+/* Menu rows often use .listItem outside the drawer/paperList wrappers. */
+.listItem + .listItem,
+.emby-button + .emby-button,
+.paperList > * + *,
+.emby-scroller > * + *,
+.userMenuPage a + a,
+#userMenuPage a + a {
+  margin-top: 10px !important;
 }
 
 .paperList,
@@ -262,7 +278,6 @@ button.emby-button,
   color: #ededed !important;
   border: 1px solid #383838 !important;
   box-shadow: none !important;
-  filter: grayscale(1) !important;
 }
 
 .emby-button-submit,
@@ -291,20 +306,32 @@ input[type="radio"] {
   accent-color: #bdbdbd !important;
 }
 
-/* Jellyfin versions differ in how custom checkboxes and primary buttons are built.
-   Grayscale these controls as a final safeguard against cyan theme defaults. */
+/* Keep custom checkbox boxes and their checked state in neutral grayscale. */
 .emby-checkbox,
-.emby-checkbox + span,
+.emby-radio,
 .emby-checkbox + span::before,
 .emby-checkbox + span::after,
-.emby-radio,
-.emby-radio + span,
+.emby-radio + span::before,
+.emby-radio + span::after,
 .emby-button-submit,
 .button-submit,
 .button-primary,
 .btn-primary,
 .mdl-button--raised {
-  filter: grayscale(1) !important;
+  background-color: #191919 !important;
+  border-color: #777 !important;
+}
+
+.emby-checkbox:checked,
+.emby-checkbox:checked + span::before,
+.emby-radio:checked,
+.emby-radio:checked + span::before,
+input[type="checkbox"]:checked,
+input[type="radio"]:checked,
+[role="checkbox"][aria-checked="true"] {
+  accent-color: #bdbdbd !important;
+  background-color: #bdbdbd !important;
+  border-color: #bdbdbd !important;
 }
 
 /* Catch native Jellyfin/dashboard controls that don't use .emby-button. */
@@ -316,13 +343,12 @@ input[type="submit"],
   background-image: none !important;
   color: #ededed !important;
   border-color: #383838 !important;
-  filter: grayscale(1) !important;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
   accent-color: #bdbdbd !important;
-  filter: grayscale(1) !important;
+  background-color: #bdbdbd !important;
 }
 
 input[type="checkbox"]:checked + span::before,
@@ -332,7 +358,6 @@ input.emby-checkbox:checked + label::before,
 [role="checkbox"][aria-checked="true"] {
   background-color: #bdbdbd !important;
   border-color: #bdbdbd !important;
-  filter: grayscale(1) !important;
 }
 
 .emby-checkbox:checked + span::before,
@@ -420,10 +445,14 @@ input.emby-checkbox:checked + label::before,
   color: #eee !important;
 }
 
-/* Desaturate Jellyfin's brand mark only, not user avatars or media artwork. */
-.skinHeader .headerLogo,
-.headerLogo,
-.pageTitleWithLogo img {
+/* Desaturate the brand mark at the left of the header, never the user avatar. */
+.header [class*="Logo"],
+.header [class*="logo"],
+.header svg,
+.skinHeader .pageTitleWithLogo img,
+.skinHeader .pageTitleWithLogo svg,
+.skinHeader .pageTitleWithLogo .headerLogoImage,
+.skinHeader .pageTitleWithLogo {
   filter: grayscale(1) brightness(1.35) !important;
 }
 
