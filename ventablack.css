@@ -6,6 +6,10 @@
 
 :root {
   color-scheme: dark;
+  --theme-primary-color: #bdbdbd;
+  --theme-primary-color-dark: #777;
+  --theme-accent-color: #bdbdbd;
+  --theme-text-color: #ededed;
   --vb-black: #000;
   --vb-bg: #050505;
   --vb-surface: #0b0b0b;
@@ -35,6 +39,9 @@ body,
 .backgroundContainer,
 .mainDrawer,
 .mainAnimatedPages,
+.page,
+.pageWithAbsoluteTabs,
+.skinBody,
 .libraryPage,
 .homePage,
 .emby-tab-body,
@@ -122,6 +129,29 @@ a:hover,
   color: var(--vb-highlight);
 }
 
+/* Neutralize Jellyfin's default blue/purple indicators and badges. */
+.countIndicator,
+.playedIndicator,
+.favoriteIndicator,
+.mediaSourceIndicator,
+.unaired,
+.indicator,
+.cardIndicators .playedIndicator,
+.cardIndicators .favoriteIndicator {
+  background: #171717 !important;
+  background-color: #171717 !important;
+  color: #e5e5e5 !important;
+  border: 1px solid #555 !important;
+  box-shadow: none !important;
+}
+
+.favorite,
+.material-icons.favorite,
+.ratingbutton-icon-withrating,
+.ratingbutton-icon-withrating .material-icons {
+  color: #d0d0d0 !important;
+}
+
 /* Neutral buttons, selected tabs, progress and switches. */
 .emby-button.raised,
 .emby-button.show-focus:focus,
@@ -146,7 +176,6 @@ a:hover,
 }
 
 .itemProgressBar,
-.playedIndicator,
 .mdl-progress > .progressbar {
   background-color: #bdbdbd !important;
 }
