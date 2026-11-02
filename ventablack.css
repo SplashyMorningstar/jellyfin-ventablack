@@ -142,9 +142,10 @@ body,
 
 /* Menu rows often use .listItem outside the drawer/paperList wrappers. */
 .listItem + .listItem,
+.emby-button + .emby-button,
 .userMenuPage a + a,
 #userMenuPage a + a {
-  margin-top: 10px !important;
+  margin-top: 6px !important;
 }
 
 .paperList,
@@ -172,7 +173,7 @@ body,
 .emby-input,
 .emby-textarea,
 .emby-button {
-  border-radius: 8px !important;
+  border-radius: 12px !important;
 }
 
 .cardBox,
@@ -487,26 +488,50 @@ input.emby-checkbox:checked + label::before,
   border-radius: 50% !important;
 }
 
+.header .headerButton:not(.headerLogoButton),
+.header button:not(.headerLogoButton),
+.header [role="button"]:not(.headerLogoButton),
+.skinHeader .headerButton:not(.headerLogoButton),
+.skinHeader button:not(.headerLogoButton),
+.skinHeader [role="button"]:not(.headerLogoButton) {
+  box-sizing: border-box !important;
+  width: 34px !important;
+  min-width: 34px !important;
+  max-width: 34px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  max-height: 34px !important;
+  padding: 0 !important;
+  margin: 0 4px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 34px !important;
+  border-radius: 50% !important;
+}
+
 /* Keep card overlay actions compact and evenly spaced over the artwork. */
 .cardOverlayButton,
-.cardOverlayContainer .emby-button,
-.cardOverlayContainer button,
 .cardOverlayButtonContainer .emby-button,
-.cardOverlayButtonContainer button,
-.cardIndicators .emby-button {
+.cardOverlayButtonContainer button {
   box-sizing: border-box !important;
-  width: 38px !important;
-  min-width: 38px !important;
-  max-width: 38px !important;
-  height: 38px !important;
-  min-height: 38px !important;
-  max-height: 38px !important;
+  width: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  max-height: 32px !important;
   padding: 0 !important;
-  margin: 0 3px !important;
+  margin: 0 2px !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
   border-radius: 50% !important;
+}
+
+.cardOverlayButtonContainer {
+  bottom: 8px !important;
+  gap: 4px !important;
 }
 
 /* Menu items need room for their labels and icons; don't clip their lower edge. */
