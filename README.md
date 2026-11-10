@@ -1,15 +1,15 @@
-# VantaBlack para Jellyfin
+# VantaBlack for Jellyfin
 
-Tema negro y monocromático para Jellyfin Web, sin blur ni animaciones para mantener la interfaz ligera.
+An AMOLED black and monochrome theme for Jellyfin Web, with blur and animations disabled to keep the interface lightweight.
 
-## Instalar
+## Installation
 
-En Jellyfin, ve a **Panel de control → General → CSS personalizado** y pega esta línea como primera línea:
+In Jellyfin, go to **Dashboard → General → Custom CSS** and paste this line at the top:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/SplashyMorningstar/jellyfin-ventablack@1.0.7/ventablack.css");
+@import url("https://cdn.jsdelivr.net/gh/SplashyMorningstar/jellyfin-ventablack@1.0.8/ventablack.css");
 ```
 
-Guarda y recarga Jellyfin. Si no aparece, prueba una recarga forzada (`Ctrl+F5`). El enlace apunta a una versión fija para evitar que el CDN mezcle el CSS nuevo con una copia antigua.
+Save and reload Jellyfin. If the theme does not appear, try a hard refresh (`Ctrl+F5`). The link points to a fixed version so the CDN does not serve a stale copy of the CSS.
 
-Si `@import` no carga en tu cliente, puede que la app no permita importar CSS remoto o no tenga acceso a Internet/CDN. En ese caso, copia el contenido de [`ventablack.css`](ventablack.css) directamente en el campo CSS personalizado. Algunas apps nativas de TV ignoran el CSS personalizado por completo.
+If `@import` does not work in your client, it may not support remote CSS imports or may not have access to the internet/CDN. In that case, copy the contents of [`ventablack.css`](ventablack.css) directly into the Custom CSS field. Some native TV apps ignore custom CSS entirely.

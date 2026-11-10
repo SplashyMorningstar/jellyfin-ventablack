@@ -1,9 +1,3 @@
-/*
- * VantaBlack — monochrome AMOLED theme for Jellyfin Web
- * Inspired by Omarchy's Vantablack palette.
- * Paste into Dashboard > General > Custom CSS, or load as a stylesheet.
- */
-
 :root {
   color-scheme: dark;
   --theme-primary-color: #bdbdbd !important;
@@ -53,7 +47,6 @@ body,
   background-color: var(--vb-black) !important;
 }
 
-/* Make the common Jellyfin surfaces truly black, not blue-tinted charcoal. */
 .header,
 .headerTop,
 .paperList,
@@ -80,7 +73,6 @@ body,
   background-color: var(--vb-raised) !important;
 }
 
-/* Uniform black section headers and softly rounded grouped panels. */
 .section0,
 .sectionTitleContainer,
 .sectionTitleContainer h1,
@@ -90,7 +82,6 @@ body,
   color: #ededed !important;
 }
 
-/* Section labels should read as plain, consistently aligned headings, not pills. */
 .sectionTitleContainer,
 .sectionTitleContainer .sectionTitle,
 .sectionTitleContainer a,
@@ -140,7 +131,6 @@ body,
   border-radius: 10px !important;
 }
 
-/* Menu rows often use .listItem outside the drawer/paperList wrappers. */
 .listItem + .listItem,
 .emby-button + .emby-button,
 .userMenuPage a + a,
@@ -183,7 +173,6 @@ body,
   border-radius: 8px !important;
 }
 
-/* MUI account/settings rows: separate each tile instead of drawing one block. */
 .MuiListItemButton-root {
   box-sizing: border-box !important;
   min-height: 58px !important;
@@ -215,7 +204,6 @@ body,
   border-color: var(--vb-border) !important;
 }
 
-/* Restrained grayscale typography; keep posters and artwork in full color. */
 body,
 button,
 input,
@@ -252,7 +240,6 @@ a:hover,
   color: var(--vb-highlight);
 }
 
-/* Neutralize Jellyfin's default blue/purple indicators and badges. */
 .countIndicator,
 .playedIndicator,
 .favoriteIndicator,
@@ -275,7 +262,6 @@ a:hover,
   color: #d0d0d0 !important;
 }
 
-/* Neutral buttons, selected tabs, progress and switches. */
 .emby-button,
 .emby-button.raised,
 .emby-button.button-submit,
@@ -321,7 +307,6 @@ input[type="radio"] {
   accent-color: #bdbdbd !important;
 }
 
-/* Keep custom checkbox boxes and their checked state in neutral grayscale. */
 .emby-checkbox,
 .emby-radio,
 .emby-checkbox + span::before,
@@ -349,7 +334,6 @@ input[type="radio"]:checked,
   border-color: #bdbdbd !important;
 }
 
-/* Catch native Jellyfin/dashboard controls that don't use .emby-button. */
 button,
 input[type="button"],
 input[type="submit"],
@@ -392,7 +376,6 @@ input.emby-checkbox:checked + label::before,
   background-color: #555 !important;
 }
 
-/* Subtle edges and hover feedback. */
 .cardBox,
 .paperList,
 .listItem,
@@ -415,7 +398,6 @@ input.emby-checkbox:checked + label::before,
   outline-offset: 2px;
 }
 
-/* Remove colored/blurred page backdrops behind the UI without affecting media art. */
 .backgroundContainer.withBackdrop,
 .backdropContainer {
   background: #000 !important;
@@ -425,7 +407,6 @@ input.emby-checkbox:checked + label::before,
   opacity: 0;
 }
 
-/* Lightweight mode: no backdrop blur, animated transitions or decorative motion. */
 *,
 *::before,
 *::after {
@@ -451,7 +432,6 @@ input.emby-checkbox:checked + label::before,
   -webkit-backdrop-filter: none !important;
 }
 
-/* Keep the video itself untouched; darken only its surrounding player chrome. */
 .videoOsdBottom,
 .videoOsdBottom button,
 .videoOsdTop,
@@ -460,7 +440,6 @@ input.emby-checkbox:checked + label::before,
   color: #eee !important;
 }
 
-/* Desaturate the brand mark at the left of the header, never the user avatar. */
 .headerLeft img,
 .headerLeft svg,
 .headerLogoButton img,
@@ -483,7 +462,6 @@ input.emby-checkbox:checked + label::before,
   background-color: #000 !important;
 }
 
-/* Compact header action buttons; don't let menu-row padding inflate them. */
 .headerRight .headerButton,
 .headerRight .emby-button,
 .headerRight button,
@@ -560,7 +538,6 @@ input.emby-checkbox:checked + label::before,
   flex-basis: 40px !important;
 }
 
-/* Keep card overlay actions compact and evenly spaced over the artwork. */
 .cardOverlayButton:not(.cardOverlayButton-centered),
 .cardOverlayButtonContainer .emby-button,
 .cardOverlayButtonContainer button {
@@ -603,7 +580,6 @@ input.emby-checkbox:checked + label::before,
   margin-bottom: 4px !important;
 }
 
-/* Small, unobtrusive carousel arrows instead of oversized circles. */
 .emby-scrollbuttons {
   min-width: 72px !important;
   min-height: 24px !important;
@@ -631,7 +607,6 @@ input.emby-checkbox:checked + label::before,
   font-size: 18px !important;
 }
 
-/* Menu items need room for their labels and icons; don't clip their lower edge. */
 .paperList > .listItem,
 .mainDrawer .listItem,
 #userMenuPage .listItem,
@@ -640,4 +615,272 @@ input.emby-checkbox:checked + label::before,
   height: auto !important;
   overflow: visible !important;
   box-sizing: border-box !important;
+}
+
+:root {
+  --rosewater: #f2f2f2;
+  --flamingo: #e8e8e8;
+  --pink: #dedede;
+  --mauve: #c8c8c8;
+  --red: #a8a8a8;
+  --maroon: #b8b8b8;
+  --peach: #d0d0d0;
+  --yellow: #e0e0e0;
+  --green: #c2c2c2;
+  --teal: #bdbdbd;
+  --sky: #c9c9c9;
+  --sapphire: #b5b5b5;
+  --blue: #bdbdbd;
+  --lavender: #d4d4d4;
+  --main-color: #bdbdbd;
+  --main-background: #000;
+  --main-background-transparent: #000000cc;
+  --second-background: #0b0b0b;
+  --hover-background: #242424;
+  --hover-background-transparent: #242424b3;
+  --main-text: #ededed;
+  --white-text: #ededed;
+  --dimmer-text: #a0a0a0;
+  --red-color: #a8a8a8;
+  --green-color: #c2c2c2;
+  --blue-color: #bdbdbd;
+  --cyan-color: #c9c9c9;
+  --yellow-color: #e0e0e0;
+}
+
+.inputLabelFocused,
+.selectLabelFocused,
+.textareaLabelFocused,
+.button-link,
+.button-flat:hover,
+.itemAction:focus,
+.emby-tab-button-active > .emby-button-foreground,
+.emby-button-foreground:focus,
+.headerRight,
+.headerLeft,
+.upNextDialog-countdownText,
+.buttonActive,
+.button-accent-flat,
+.metadataSidebarIcon,
+.layout-tv .paper-icon-button-light.show-focus:focus,
+.sectionTitle,
+.cardText,
+.pageTitle,
+.detailSectionContent,
+.trackSelections,
+.checkboxLabel,
+.itemDetailsGroup,
+.checkboxOutline,
+.label,
+.selectLabel,
+.sidebarHeader,
+.listItemBodyText,
+.navMenuOption,
+.inputLabel,
+.content-primary,
+.itemName,
+.searchfields-icon,
+.paper-icon-button-light,
+.emby-button-foreground,
+.iconOsd .iconOsdIcon,
+.upNextContainer,
+.paperListLabel,
+legend {
+  color: var(--main-text) !important;
+}
+
+.mdl-radio__focus-circle,
+.mdl-slider-background-lower,
+.mdl-slider::-moz-range-thumb,
+.mdl-slider::-webkit-slider-thumb,
+.iconOsdProgressInner,
+.sliderMarker.watched,
+.itemProgressBar.playbackProgress .itemProgressBarForeground,
+.emby-checkbox:checked + span + .checkboxOutline,
+.itemProgressBarForeground {
+  background-color: var(--main-color) !important;
+}
+
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline,
+.mdl-spinner__layer,
+.itemSelectionPanel,
+.emby-input:focus,
+.emby-textarea:focus,
+.emby-select-withcolor:focus {
+  border-color: var(--main-color) !important;
+}
+
+.button-cancel,
+.button-cancel:focus {
+  color: var(--main-color) !important;
+  background: var(--main-background) !important;
+}
+
+.paper-icon-button-light:hover:not(:disabled),
+.paper-icon-button-light:active:not(:disabled),
+.listItem:hover,
+.listItem:focus,
+.navMenuOption:hover,
+.navMenuOption:focus {
+  color: var(--main-text) !important;
+  background-color: var(--hover-background) !important;
+}
+
+.button-submit,
+.button-submit:focus,
+.button-alt,
+.button-alt:focus,
+.submit,
+.submit:focus,
+#btnAddPerson,
+#btnAddPerson:focus,
+.btnAddTrigger,
+.btnAddTrigger:focus,
+.btnAddUser,
+.btnAddUser:focus,
+::selection,
+::-moz-selection {
+  color: #000 !important;
+  background: var(--main-color) !important;
+}
+
+.selectionCommandsPanel,
+.indicator,
+.btnRefresh,
+.programCell:focus,
+div[data-role="controlgroup"] a.ui-btn-active {
+  color: #000 !important;
+  background-color: var(--main-color) !important;
+}
+
+#btnShutdown,
+#deviceDeleteAll,
+.btnDeleteImage,
+.btnResetPassword,
+.playedIndicator,
+.playstatebutton-icon-played,
+.ratingbutton-icon-withrating,
+.notification_important,
+.notifications,
+.starIcon {
+  color: #ededed !important;
+}
+
+#btnShutdown,
+#deviceDeleteAll,
+.btnDeleteImage,
+.btnResetPassword {
+  background: #292929 !important;
+}
+
+.backdropContainer,
+.mainDrawer,
+.cardBox,
+.paperList,
+.emby-select-withcolor > option,
+.backgroundContainer,
+.nowPlayingPlaylist,
+.collapseContent,
+.formDialogHeader,
+.dialog,
+.dashboardGeneralForm,
+.playlistSectionButton,
+.noBackdropTransparency .detailPagePrimaryContainer,
+.emby-input,
+.emby-textarea,
+.emby-select,
+.iconOsd,
+.logoScreenSaver,
+.programCell-active,
+.cardContent.defaultCardBackground,
+.cardContent .defaultCardBackground,
+.detailPageSecondaryContainer,
+.sliderBubble,
+.infoBanner,
+.nowPlayingBar,
+div[data-role="controlgroup"] .emby-button,
+.fab,
+.toast,
+.raised,
+.iconOsdProgressOuter,
+.mdl-slider-background-flex,
+.formDialogHeader:not(.formDialogHeader-clear),
+.formDialogFooter:not(.formDialogFooter-clear),
+.cardBox:not(.visualCardBox) .cardPadder {
+  color: var(--main-text) !important;
+  background-color: var(--second-background) !important;
+}
+
+.detailRibbon,
+.backgroundContainer.withBackdrop {
+  background-color: var(--main-background-transparent) !important;
+}
+
+.mediaInfoText,
+.itemProgressBar.backgroundProgress .itemProgressBarForeground,
+.listItem-border {
+  background-color: var(--hover-background) !important;
+  border-color: var(--hover-background) !important;
+}
+
+.alphaPickerRow,
+.devices-subheader,
+.cardText-secondary,
+.nowPlayingBarSecondaryText,
+.fieldDescription,
+.alphaPickerButton-selected,
+.secondary {
+  color: var(--dimmer-text) !important;
+}
+
+.osdTextContainer,
+.osdTimeText,
+.transparentDocument .paper-icon-button-light,
+.transparentDocument .pageTitle,
+.cardOverlayContainer .paper-icon-button-light,
+.sessionAppName,
+.sessionNowPlayingInfo,
+.sessionNowPlayingTime {
+  color: var(--white-text) !important;
+}
+
+#homePage a.homeLibraryButton[href*="music" i],
+.homePage a.homeLibraryButton[href*="music" i],
+#homePage a.homeLibraryButton[href*="livetv" i],
+.homePage a.homeLibraryButton[href*="livetv" i],
+#homePage a.homeLibraryButton[href*="live-tv" i],
+.homePage a.homeLibraryButton[href*="live-tv" i],
+#homePage .cardBox:has(a[href*="music" i]),
+.homePage .cardBox:has(a[href*="music" i]),
+#homePage .cardBox:has(a[href*="livetv" i]),
+.homePage .cardBox:has(a[href*="livetv" i]),
+#homePage .cardBox:has(a[href*="live-tv" i]),
+.homePage .cardBox:has(a[href*="live-tv" i]),
+#homePage .itemsContainer > *:has(a[href*="music" i]),
+.homePage .itemsContainer > *:has(a[href*="music" i]),
+#homePage .itemsContainer > *:has(a[href*="livetv" i]),
+.homePage .itemsContainer > *:has(a[href*="livetv" i]),
+#homePage .itemsContainer > *:has(a[href*="live-tv" i]),
+.homePage .itemsContainer > *:has(a[href*="live-tv" i]) {
+  display: none !important;
+}
+
+.layout-tv .emby-button:not(.emby-tab-button).show-focus:focus {
+  color: #000 !important;
+  background: var(--main-color) !important;
+  border-color: #ededed !important;
+  outline: 2px solid #ededed !important;
+  outline-offset: 2px;
+}
+
+.layout-tv .emby-button:not(.emby-tab-button).show-focus:focus .listItem,
+.layout-tv .emby-button:not(.emby-tab-button).show-focus:focus .listItemBodyText,
+.layout-tv .emby-button:not(.emby-tab-button).show-focus:focus .emby-button-foreground {
+  color: #000 !important;
+}
+
+.layout-tv .paper-icon-button-light.show-focus:focus,
+.mdl-radio.show-focus .mdl-radio__button:focus + .mdl-radio__circles .mdl-radio__inner-circle,
+.mdl-radio.show-focus .mdl-radio__button:focus + .mdl-radio__circles .mdl-radio__outer-circle {
+  color: var(--main-color) !important;
 }
