@@ -7,7 +7,7 @@ An AMOLED black and monochrome theme for Jellyfin Web. Backdrop blur is disabled
 In Jellyfin, go to **Dashboard → General → Custom CSS** and paste this line at the top:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/SplashyMorningstar/jellyfin-ventablack@1.0.9/ventablack.css");
+@import url("https://cdn.jsdelivr.net/gh/SplashyMorningstar/jellyfin-ventablack@1.0.10/ventablack.css");
 ```
 
 Save and reload Jellyfin. If the theme does not appear, try a hard refresh (`Ctrl+F5`). The link points to a fixed version so the CDN does not serve a stale copy of the CSS.

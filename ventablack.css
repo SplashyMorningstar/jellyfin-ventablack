@@ -386,15 +386,6 @@ input.emby-checkbox:checked + label::before,
   outline-offset: 2px;
 }
 
-.backgroundContainer.withBackdrop,
-.backdropContainer {
-  background: #000 !important;
-}
-
-.backdropContainer {
-  opacity: 0;
-}
-
 .backgroundContainer,
 .backdropContainer,
 .detailPage,
