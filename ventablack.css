@@ -16,6 +16,12 @@
   --vb-dim: #707070;
   --vb-highlight: #fff;
   --vb-focus: #c8c8c8;
+  --vb-radius: 8px;
+  --vb-radius-panel: 12px;
+}
+
+* {
+  scrollbar-color: var(--hover-background) var(--second-background);
 }
 
 html,
@@ -110,7 +116,7 @@ body,
 .mainDrawer-scrollContainer,
 .listViewUserDataButtons,
 .verticalSection > .paperList {
-  border-radius: 12px !important;
+  border-radius: var(--vb-radius-panel) !important;
   overflow: visible;
 }
 
@@ -123,19 +129,12 @@ body,
 #userMenuPage > .emby-button,
 .userMenuPage > .emby-button {
   box-sizing: border-box !important;
-  width: calc(100% - 16px) !important;
-  margin: 8px !important;
-  padding: 14px 16px !important;
+  width: calc(100% - 12px) !important;
+  margin: 6px !important;
+  padding: 12px 14px !important;
   background: #0b0b0b !important;
   border: 1px solid #252525 !important;
   border-radius: 10px !important;
-}
-
-.listItem + .listItem,
-.emby-button + .emby-button,
-.userMenuPage a + a,
-#userMenuPage a + a {
-  margin-top: 6px !important;
 }
 
 .paperList,
@@ -150,9 +149,9 @@ body,
 .mainDrawer .paperList > a {
   display: flex !important;
   box-sizing: border-box !important;
-  width: calc(100% - 16px) !important;
-  margin: 8px !important;
-  padding: 14px 16px !important;
+  width: calc(100% - 12px) !important;
+  margin: 6px !important;
+  padding: 12px 14px !important;
   background: #0b0b0b !important;
   border: 1px solid #252525 !important;
   border-radius: 10px !important;
@@ -163,23 +162,23 @@ body,
 .emby-input,
 .emby-textarea,
 .emby-button {
-  border-radius: 12px !important;
+  border-radius: var(--vb-radius) !important;
 }
 
 .cardBox,
 .cardImageContainer,
 .cardScalable,
 .cardImage {
-  border-radius: 8px !important;
+  border-radius: var(--vb-radius) !important;
 }
 
 .MuiListItemButton-root {
   box-sizing: border-box !important;
-  min-height: 58px !important;
+  min-height: 56px !important;
   height: auto !important;
   margin: 0 !important;
-  padding-block: 12px !important;
-  border-radius: 16px !important;
+  padding-block: 10px !important;
+  border-radius: var(--vb-radius) !important;
   background-color: #0b0b0b !important;
   overflow: visible !important;
 }
@@ -376,17 +375,6 @@ input.emby-checkbox:checked + label::before,
   background-color: #555 !important;
 }
 
-.cardBox,
-.paperList,
-.listItem,
-.emby-input,
-.emby-select,
-.emby-textarea,
-.dialog,
-.formDialog {
-  border-radius: 4px;
-}
-
 .cardBox:hover,
 .listItem:hover,
 .emby-button:hover {
@@ -405,16 +393,6 @@ input.emby-checkbox:checked + label::before,
 
 .backdropContainer {
   opacity: 0;
-}
-
-*,
-*::before,
-*::after {
-  animation: none !important;
-  transition: none !important;
-  scroll-behavior: auto !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
 }
 
 .backgroundContainer,
@@ -438,6 +416,22 @@ input.emby-checkbox:checked + label::before,
 .nowPlayingBar {
   background-color: rgba(0, 0, 0, 0.94) !important;
   color: #eee !important;
+}
+
+.videoOsdBottom button,
+.videoOsdTop button {
+  box-sizing: border-box !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+  padding: 8px !important;
+  background: transparent !important;
+  border-color: transparent !important;
+  border-radius: 50% !important;
+}
+
+.videoOsdBottom button:hover,
+.videoOsdTop button:hover {
+  background: #242424 !important;
 }
 
 .headerLeft img,
@@ -485,32 +479,6 @@ input.emby-checkbox:checked + label::before,
   border-radius: 50% !important;
 }
 
-.header .headerButton:not(.headerLogoButton),
-.header button:not(.headerLogoButton),
-.header [role="button"]:not(.headerLogoButton),
-.header .MuiIconButton-root,
-.headerRight .MuiIconButton-root,
-.MuiToolbar-root .MuiIconButton-root,
-.skinHeader .headerButton:not(.headerLogoButton),
-.skinHeader button:not(.headerLogoButton),
-.skinHeader [role="button"]:not(.headerLogoButton),
-.skinHeader .MuiIconButton-root {
-  box-sizing: border-box !important;
-  width: 28px !important;
-  min-width: 28px !important;
-  max-width: 28px !important;
-  height: 28px !important;
-  min-height: 28px !important;
-  max-height: 28px !important;
-  padding: 0 !important;
-  margin: 0 4px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex: 0 0 28px !important;
-  border-radius: 50% !important;
-}
-
 .header .MuiIconButton-root,
 .headerRight .MuiIconButton-root,
 .MuiToolbar-root .MuiIconButton-root {
@@ -542,13 +510,13 @@ input.emby-checkbox:checked + label::before,
 .cardOverlayButtonContainer .emby-button,
 .cardOverlayButtonContainer button {
   box-sizing: border-box !important;
-  width: 26px !important;
-  min-width: 26px !important;
-  max-width: 26px !important;
-  height: 26px !important;
-  min-height: 26px !important;
-  max-height: 26px !important;
-  padding: 0.2em !important;
+  width: 36px !important;
+  min-width: 36px !important;
+  max-width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  padding: 0.3em !important;
   margin: 0 2px !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -564,9 +532,9 @@ input.emby-checkbox:checked + label::before,
 
 .cardOverlayButton .MuiSvgIcon-root,
 .cardOverlayButton .material-icons {
-  width: 16px !important;
-  height: 16px !important;
-  font-size: 16px !important;
+  width: 18px !important;
+  height: 18px !important;
+  font-size: 18px !important;
 }
 
 .cardOverlayButtonContainer {
@@ -588,13 +556,13 @@ input.emby-checkbox:checked + label::before,
 
 .emby-scrollbuttons-button {
   box-sizing: border-box !important;
-  width: 30px !important;
-  min-width: 30px !important;
-  max-width: 30px !important;
-  height: 30px !important;
-  min-height: 30px !important;
-  max-height: 30px !important;
-  padding: 3px !important;
+  width: 36px !important;
+  min-width: 36px !important;
+  max-width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  padding: 4px !important;
   margin: 0 2px !important;
   border-radius: 50% !important;
 }
@@ -611,7 +579,7 @@ input.emby-checkbox:checked + label::before,
 .mainDrawer .listItem,
 #userMenuPage .listItem,
 .userMenuPage .listItem {
-  min-height: 64px !important;
+  min-height: 56px !important;
   height: auto !important;
   overflow: visible !important;
   box-sizing: border-box !important;
